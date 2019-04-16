@@ -5,6 +5,10 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.view.View.OnClickListener
+import com.example.hdev.sharedata.DetailFragment
+import com.example.hdev.sharedata.MasterFragment
+import kotlinx.android.synthetic.main.activity_main.buttonFragmentDetail
+import kotlinx.android.synthetic.main.activity_main.buttonFragmentMaster
 import kotlinx.android.synthetic.main.activity_main.buttonScoreTeamA
 import kotlinx.android.synthetic.main.activity_main.buttonScoreTeamB
 import kotlinx.android.synthetic.main.activity_main.textScoreTeamA
@@ -26,12 +30,16 @@ class MainActivity : AppCompatActivity(), OnClickListener {
         when (v?.id) {
             R.id.buttonScoreTeamA -> addOneForTeamA()
             R.id.buttonScoreTeamB -> addOneForTeamB()
+            R.id.buttonFragmentMaster -> addFragmentMaster()
+            R.id.buttonFragmentDetail -> addFragmentDetail()
         }
     }
 
-    private fun initComponents(){
+    private fun initComponents() {
         buttonScoreTeamA.setOnClickListener(this)
         buttonScoreTeamB.setOnClickListener(this)
+        buttonFragmentMaster.setOnClickListener(this)
+        buttonFragmentDetail.setOnClickListener(this)
     }
 
     private fun addOneForTeamA() {
@@ -50,5 +58,17 @@ class MainActivity : AppCompatActivity(), OnClickListener {
 
     private fun displayScoreTeamB() {
         textScoreTeamB.text = viewModel.scoreTeamB.toString()
+    }
+
+    private fun addFragmentMaster() {
+        supportFragmentManager.beginTransaction()
+            .add(R.id.frameLayoutTeamA, MasterFragment())
+            .commit()
+    }
+
+    private fun addFragmentDetail() {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.frameLayoutTeamB, DetailFragment())
+            .commit()
     }
 }

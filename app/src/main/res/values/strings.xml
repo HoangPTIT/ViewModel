@@ -3,4 +3,24 @@
     <string name="name_button_score">+1</string>
     <string name="score_team_a">Team A</string>
     <string name="score_team_b">Team B</string>
+    <string name="list_name_user">Danh sách người dùng</string>
+    <string name="name_user">Tên người dùng</string>
+    <string name="add_fragment_master">Master</string>
+    <string name="add_fragment_detail">Detail</string>
+    <string-array name="users_name">
+        <item>Hoa</item>
+        <item>Hoang</item>
+        <item>Nam</item>
+        <item>Ha</item>
+        <item>Hai</item>
+        <item>Trung</item>
+        <item>Dinh</item>
+        <item>Hung</item>
+        <item>Huy</item>
+        <item>Mai</item>
+        <item>Kim</item>
+        <item>Huong</item>
+        <item>Dao</item>
+        <item>Man</item>
+    </string-array>
 </resources>

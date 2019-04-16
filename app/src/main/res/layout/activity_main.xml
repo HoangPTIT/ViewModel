@@ -49,6 +49,49 @@
         app:layout_constraintRight_toRightOf="@id/textTeamB"
         app:layout_constraintTop_toBottomOf="@id/textTeamB" />
 
+    <FrameLayout
+        android:id="@+id/frameLayoutTeamA"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/dp_50"
+        android:layout_marginTop="@dimen/dp_50"
+        app:layout_constraintBottom_toTopOf="@id/buttonFragmentMaster"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textScoreTeamA"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <FrameLayout
+        android:id="@+id/frameLayoutTeamB"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/dp_50"
+        android:layout_marginTop="@dimen/dp_50"
+        app:layout_constraintBottom_toTopOf="@id/buttonFragmentMaster"
+        app:layout_constraintLeft_toRightOf="@id/frameLayoutTeamA"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textScoreTeamA" />
+
+    <Button
+        android:id="@+id/buttonFragmentMaster"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_fragment_master"
+        app:layout_constraintBottom_toTopOf="@id/buttonScoreTeamA"
+        app:layout_constraintEnd_toStartOf="@+id/buttonFragmentDetail"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonFragmentDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_fragment_detail"
+        app:layout_constraintBottom_toTopOf="@id/buttonScoreTeamB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonFragmentMaster" />
+
     <Button
         android:id="@+id/buttonScoreTeamA"
         android:layout_width="wrap_content"
